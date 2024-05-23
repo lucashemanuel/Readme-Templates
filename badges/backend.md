@@ -71,6 +71,42 @@ cd project-name
 npm some-command-to-run
 ``````
 
+<h2>Entity Relationship Diagram</h2>
+
+```mermaid
+classDiagram
+  class Test {
+    -String fiel
+    -Table table
+    -Table1[] table1
+  }
+
+  class Table {
+    -String field
+    -String field
+    -Number field
+  }
+
+  class Table1 {
+    -String field
+    -String field
+  }
+
+  class Table2 {
+    -String field
+    -Number field
+  }
+
+  class Table3 {
+    -String field
+    -String field
+  }
+
+  Test "1" *-- "1" Table
+  Test "1" *-- "N" Table1
+  Test "1" *-- "1" Table2
+  Test "1" *-- "N" Table3
+```
 
 <h2 id="routes">📍 API Endpoints</h2>
 
